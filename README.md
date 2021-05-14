@@ -121,3 +121,4 @@ Spartos tikrinimas atliktas su Processor	Intel(R) Core(TM) i5-4210U CPU @ 1.70GH
 - [v1.0](https://github.com/PovilasRandis/2laboratorinis/releases/tag/v1.0) Šioje versijoje buvo pridėta galimybė skirstyti studentus dviems būdais.
 - [v1.1](https://github.com/PovilasRandis/2laboratorinis/releases/tag/v1.1) Šioje versijoje duomenys laikomi klasėse, o ne struktūrose.
 - [v1.2](https://github.com/PovilasRandis/2.1-laboratorinis/releases/tag/v1.2) Šioje versijoje realizuota trijų taisyklė.
+- [v1.5](https://github.com/PovilasRandis/2.1-laboratorinis/releases/tag/v1.5) Šioje versijoje sukurtos dvi klasės (bazinė ir išvestinė).
