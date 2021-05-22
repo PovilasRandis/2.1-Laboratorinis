@@ -13,9 +13,28 @@
 using namespace std;
 using namespace chrono;
 
-class Studentas{
+    class Zmogus{
+        protected:
+            string vardas, pavarde;
+            int final;
+
+        public: 
+            virtual ~Zmogus() = 0;
+
+            string getVardas() const { return vardas; }
+            string getPavarde() const { return pavarde; }
+
+        void setVard(string _vardas, string _pavarde){
+            vardas = _vardas;
+            pavarde = _pavarde;
+        }
+        void setFinal(int _final){ final = _final; }
+};
+
+inline Zmogus::~Zmogus(){}
+
+class Studentas : public Zmogus{
     private:
-        string vardas, pavarde;
         int final;
 
     public: 
@@ -24,25 +43,23 @@ class Studentas{
             pavarde = _pavarde;
         }
 
-        void setfinal(int _final){
-            final = _final;
-        }
+        void setFinal(int _final){ final = _final; }
 
-        string getVardas() const {
-            return vardas;
-        }
+        string getVardas() const { return vardas; }
+        string getPavarde() const { return pavarde; }
+        int getFinal() const { return final; }
 
-        string getPavarde() const {
-            return pavarde;
-        }
-
-        int getFinal() const {
-            return final;
-        }
 
         Studentas(){}
-        Studentas (string _vardas, string _pavarde, int _final) : vardas(_vardas), pavarde(_pavarde), final(_final){}
-        Studentas (const Studentas& a) : vardas(a.getVardas()), pavarde(a.getPavarde()), final(a.getFinal()){}        // Kopijavimo konstruktorius
+        Studentas (string _vardas, string _pavarde, int _final) : final(_final){
+            vardas = _vardas;
+            pavarde = _pavarde; 
+        }
+
+        Studentas (const Studentas& a) : final(a.getFinal()){        // Kopijavimo konstruktorius
+            vardas = a.getVardas();
+            pavarde = a.getPavarde();
+        }
 
         Studentas& operator=(const Studentas& a){     // Priskyrimo operatorius
             if(&a == this) 

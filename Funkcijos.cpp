@@ -68,7 +68,7 @@ bool IvedimasIsFailo(P& A, double Laik[]){
                 ndV.push_back(sk);
             }
             in >> sk;
-            A.back().setfinal(round(0.4 * Vidurkis(ndV) + 0.6 * sk));
+            A.back().setFinal(round(0.4 * Vidurkis(ndV) + 0.6 * sk));
         }
         in.close();
     }
